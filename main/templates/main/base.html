@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>{% block title %}Bonsoir{% endblock %}</title>
+	<style type="text/css">
+		body{
+			background: steelblue;
+			color: orange;
+			font-family: sans-serif;
+			
+		}
+
+		.sidenav{
+			height: 100%;
+			width: 20vw;
+			position: fixed;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			background: wheat;
+			overflow-x: hidden;
+			padding-top: 2vh;
+		}
+
+		.sidenav a{
+			padding: 2%;
+			text-decoration: none;
+			display: block;
+		}
+
+		.sidenav a: hover{
+			color: steelblue;
+			transition: 1s;
+		}
+	</style>
+</head>
+<body>
+	<div class="sidenav">
+		<a href="/">home</a>
+		<a href="/create">create</a>
+		<a href="/view">view</a>
+	</div>
+	<center>
+<h1>holanda yolanda como anda</h1>
+
+{% block content %}
+{% endblock %}
+
+<a href="/login">inloggen</a>
+
+</center>
+</body>
+</html>

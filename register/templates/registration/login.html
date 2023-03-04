@@ -1,0 +1,12 @@
+{% extends 'main/base.html' %}
+
+{% block title %}login here{% endblock %}
+
+{% block content %}
+<form method="POST">
+	{% csrf_token %}
+	{{form}}
+	<button type="submit">login</button>
+	<p>dont have an account? create one <a href="/register">here</a></p>
+</form>
+{% endblock %}
